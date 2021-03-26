@@ -9,3 +9,11 @@
 
 # Undo-tree save-files
 *.~undo-tree
+
+# init
+.cache
+ac-comphist.dat
+custom.el
+elpa
+persp-confs
+transient
