@@ -16,4 +16,5 @@ ac-comphist.dat
 custom.el
 elpa
 persp-confs
+recentf
 transient
