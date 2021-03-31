@@ -18,6 +18,7 @@
 
 (depends-on "python-mode")
 (depends-on "cmake-mode")
+(depends-on "meson-mode")
 (depends-on "docker-compose-mode")
 (depends-on "dockerfile-mode")
 (depends-on "haskell-mode")

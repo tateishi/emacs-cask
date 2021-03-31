@@ -96,15 +96,9 @@
           dockerfile-mode
           haskell-mode
           json-mode
+          meson-mode
           python-mode
           yaml-mode))
-
-;; (use-package cmake-mode)
-;; (use-package docker-compose-mode)
-;; (use-package dockerfile-mode)
-;; (use-package haskell-mode)
-;; (use-package json-mode)
-
 
 ;;;
 ;;; magit
