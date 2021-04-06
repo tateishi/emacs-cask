@@ -23,6 +23,7 @@
 (depends-on "dockerfile-mode")
 (depends-on "haskell-mode")
 (depends-on "json-mode")
+(depends-on "ledger-mode")
 (depends-on "markdown-mode")
 (depends-on "yaml-mode")
 

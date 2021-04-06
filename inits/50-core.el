@@ -90,6 +90,15 @@
          ("\\.markdown\\'" . markdown-mode))
   :init (setq markdown-command "multimarkdown"))
 
+(defun my-ledger-mode-hook ()
+  (setq-local tab-always-indent 'complete)
+  (setq-local completion-cycle-threshold t)
+  (setq-local ledger-complete-in-steps t))
+
+(use-package ledger-mode
+  :hook
+  (ledger-mode . my-ledger-mode-hook))
+
 (mapcar (lambda (package) (use-package package))
         '(cmake-mode
           docker-compose-mode
