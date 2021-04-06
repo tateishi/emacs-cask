@@ -11,6 +11,7 @@
 *.~undo-tree
 
 # init
+.#*
 .cache
 ac-comphist.dat
 custom.el
