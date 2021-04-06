@@ -74,8 +74,7 @@
 
 (defun my-cc-mode-hook ()
   (google-set-c-style)
-  (google-make-newline-indent)
-  (setq c-basic-offset 4))
+  (google-make-newline-indent))
 
 (use-package cc-mode
   :init
@@ -99,15 +98,15 @@
   :hook
   (ledger-mode . my-ledger-mode-hook))
 
-(mapcar (lambda (package) (use-package package))
-        '(cmake-mode
-          docker-compose-mode
-          dockerfile-mode
-          haskell-mode
-          json-mode
-          meson-mode
-          python-mode
-          yaml-mode))
+(mapc (lambda (package) (use-package package))
+      '(cmake-mode
+        docker-compose-mode
+        dockerfile-mode
+        haskell-mode
+        json-mode
+        meson-mode
+        python-mode
+        yaml-mode))
 
 ;;;
 ;;; magit
@@ -153,7 +152,7 @@
 
 (use-package which-key
   :config (which-key-mode t))
-
+ 
 (use-package persp-mode
   :config (persp-mode t))
 
