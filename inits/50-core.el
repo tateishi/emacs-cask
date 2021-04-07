@@ -212,6 +212,7 @@ _k_: up line     _U_: backward up list _3_: window 3
 _+_: larger      _d_: down list        _4_: window 4
 _-_: smaller     _x_: helm-M-x         _5_: window 5
 _q_: exit        _o_: helm-for-files   _6_: window 6
+               _a_: helm-apropos
 "
     ("+" text-scale-increase)
     ("-" text-scale-decrease)
@@ -230,6 +231,7 @@ _q_: exit        _o_: helm-for-files   _6_: window 6
     ("E" end-of-defun)
     ("x" helm-M-x)
     ("o" helm-for-files)
+    ("a" helm-apropos)
     ("w" ace-window)
     (":" avy-goto-char-timer)
     ("m" hydra-move/body        :exit t)
