@@ -20,6 +20,7 @@
   :no-require t
   :config
   (column-number-mode t)
+  (size-indication-mode t)
   (menu-bar-mode -1)
   (tool-bar-mode -1)
   (scroll-bar-mode -1))
@@ -33,10 +34,11 @@
 
 (use-package general
   :no-require t
-  :hook ((before-save-hook . delete-trailing-whitespace))
+  :hook ((before-save . delete-trailing-whitespace))
   :init
+  (show-paren-mode t)
   (setq-default require-final-newline t)
-  (setq-default show-trailing-white-space t))
+  (setq-default show-trailing-whitespace t))
 
 (use-package undo-tree
   :bind (("M-/" . undo-tree-redo)
@@ -152,7 +154,7 @@
 
 (use-package which-key
   :config (which-key-mode t))
- 
+
 (use-package persp-mode
   :config (persp-mode t))
 
