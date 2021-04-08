@@ -293,3 +293,15 @@ _q_: exit
     ("k" windmove-up)
     ("<return>" swap-first-window)
     ("q" nil)))
+
+
+(defun my-kinshu-mode-hook ()
+  (setq indent-tabs-mode nil))
+
+(use-package kinshu-mode
+  :load-path "lisp"
+  :commands (kinshu-mode)
+  :hook (kinshu-mode . my-kinshu-mode-hook))
+
+(use-package my-functions
+  :load-path "lisp")
