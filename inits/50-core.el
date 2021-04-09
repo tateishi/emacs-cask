@@ -96,7 +96,14 @@
   (setq-local completion-cycle-threshold t)
   (setq-local ledger-complete-in-steps t))
 
-(use-package ledger-mode
+;; (use-package ledger-mode
+;;   :hook
+;;   (ledger-mode . my-ledger-mode-hook))
+
+
+(use-package shiwake-mode
+  :load-path "lisp"
+  :commands (shiwake-mode)
   :hook
   (ledger-mode . my-ledger-mode-hook))
 
@@ -294,7 +301,6 @@ _q_: exit
     ("<return>" swap-first-window)
     ("q" nil)))
 
-
 (defun my-kinshu-mode-hook ()
   (setq indent-tabs-mode nil))
 
@@ -302,6 +308,3 @@ _q_: exit
   :load-path "lisp"
   :commands (kinshu-mode)
   :hook (kinshu-mode . my-kinshu-mode-hook))
-
-(use-package my-functions
-  :load-path "lisp")
