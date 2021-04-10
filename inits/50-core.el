@@ -32,13 +32,15 @@
 (defun my-disable-trailing-whitespace ()
   (setq show-trailing-whitespace nil))
 
+(defun my-enable-trailing-whitespace ()
+  (setq show-trailing-whitespace t))
+
 (use-package general
   :no-require t
   :hook ((before-save . delete-trailing-whitespace))
   :init
   (show-paren-mode t)
-  (setq-default require-final-newline t)
-  (setq-default show-trailing-whitespace t))
+  (setq-default require-final-newline t))
 
 (use-package undo-tree
   :bind (("M-/" . undo-tree-redo)
@@ -82,7 +84,8 @@
   :init
   (use-package google-c-style)
   :hook
-  (c-mode-common . my-cc-mode-hook))
+  (c-mode-common . my-cc-mode-hook)
+  (c-mode-common . my-enable-trailing-whitespace))
 
 (use-package markdown-mode
   :commands (markdown-mode gfm-mode)
@@ -96,16 +99,12 @@
   (setq-local completion-cycle-threshold t)
   (setq-local ledger-complete-in-steps t))
 
-;; (use-package ledger-mode
-;;   :hook
-;;   (ledger-mode . my-ledger-mode-hook))
-
-
 (use-package shiwake-mode
   :load-path "lisp"
   :commands (shiwake-mode)
   :hook
-  (ledger-mode . my-ledger-mode-hook))
+  (ledger-mode . my-ledger-mode-hook)
+  (ledger-mode . my-enable-trailing-whitespace))
 
 (mapc (lambda (package) (use-package package))
       '(cmake-mode
