@@ -122,7 +122,7 @@
   (interactive)
   (save-excursion
     (kinshu-delete-sum)
-    (goto-char (point-max))
+    (end-of-line)
     (let ((amount (kinshu-amount (kinshu-read-counts (current-buffer)))))
       (insert (format kinshu-sum-template amount)))))
 
