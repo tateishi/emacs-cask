@@ -38,3 +38,5 @@
 (depends-on "auto-complete")
 (depends-on "avy")
 (depends-on "helm")
+
+(depends-on "helm-ag")

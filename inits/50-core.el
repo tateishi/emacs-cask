@@ -101,6 +101,12 @@
    ("C-h"     . delete-backward-char)))
 
 ;;;
+;;; helm-ag
+;;;
+
+(use-package helm-ag)
+
+;;;
 ;;; program modes
 ;;;
 
@@ -241,10 +247,10 @@ MAIN
 --------------------------------------------------------------------------------
 _h_: left char   _f_: forward sexp     _0_: treemacs  _m_: MOVE
 _l_: right char  _b_: backward sexp    _1_: window 1  _w_: ace-window
-_j_: down line   _u_: up list          _2_: window 2  _:_: goto-char
-_k_: up line     _U_: backward up list _3_: window 3
-_+_: larger      _d_: down list        _4_: window 4
-_-_: smaller     _x_: helm-M-x         _5_: window 5
+_j_: down line   _u_: up list          _2_: window 2  _g_: helm-ag
+_k_: up line     _U_: backward up list _3_: window 3  _:_: goto-char
+_+_: larger      _d_: down list        _4_: window 4  _._: tag
+_-_: smaller     _x_: helm-M-x         _5_: window 5  _,_: back
 _q_: exit        _o_: helm-for-files   _6_: window 6
                _a_: helm-apropos
 "
@@ -266,8 +272,11 @@ _q_: exit        _o_: helm-for-files   _6_: window 6
     ("x" helm-M-x)
     ("o" helm-for-files)
     ("a" helm-apropos)
+    ("g" helm-ag)
     ("w" ace-window)
     (":" avy-goto-char-timer)
+    ("." xref-find-definitions)
+    ("," xref-pop-marker-stack)
     ("m" hydra-move/body        :exit t)
     ("0" treemacs-select-window :exit t)
     ("1" winum-select-window-1  :exit t)
