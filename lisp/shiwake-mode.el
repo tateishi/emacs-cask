@@ -33,12 +33,13 @@
 (require 'ledger-mode)
 
 (defconst shiwake-date-template
-  "# ================ %Y/%m/%d ================\n")
+  "
+# =================== %Y/%m/%d ===================\n")
 
 (defconst shiwake-account-template
-"
-#   %s
-# ------------\n\n")
+  "
+#                     %s
+# --------------------------------------------------\n\n")
 
 (defun shiwake-date ()
   (interactive)
