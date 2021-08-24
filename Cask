@@ -40,3 +40,7 @@
 (depends-on "helm")
 
 (depends-on "helm-ag")
+
+(depends-on "vertico")
+(depends-on "orderless")
+(depends-on "consult")

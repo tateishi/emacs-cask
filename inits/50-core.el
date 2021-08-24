@@ -92,19 +92,45 @@
 ;;; helm
 ;;;
 
-(use-package helm
-  :bind
-  (("C-x C-f" . helm-find-files)
-   ("M-x"     . helm-M-x)
-   ("C-x b"   . helm-for-files)
-   :map helm-map
-   ("C-h"     . delete-backward-char)))
+;; (use-package helm
+;;   :bind
+;;   (("C-x C-f" . helm-find-files)
+;;    ("M-x"     . helm-M-x)
+;;    ("C-x b"   . helm-for-files)
+;;    :map helm-map
+;;    ("C-h"     . delete-backward-char)))
 
 ;;;
 ;;; helm-ag
 ;;;
 
-(use-package helm-ag)
+;; (use-package helm-ag)
+
+;;;
+;;; vertico
+;;;
+
+(use-package vertico
+  :init
+  (vertico-mode)
+  :config
+  (setq vertico-count 20))
+
+;;;
+;;; orderless
+;;;
+
+(use-package orderless
+  :custom (completion-styles '(orderless)))
+
+;;;
+;;; consult
+;;;
+
+;; (use-package consult
+;;   :bind
+;;   (("C-x b" . consult-buffer))
+;; )
 
 ;;;
 ;;; program modes
