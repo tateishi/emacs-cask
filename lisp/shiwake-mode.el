@@ -49,6 +49,10 @@
   (interactive "MAccount: ")
   (insert (format shiwake-account-template account)))
 
+(defun shiwake-read-account ()
+  (interactive)
+  (insert (completing-read "科目名: " (ledger-accounts-list))))
+
 (defvar shiwake-mode-map
   (let ((map (make-sparse-keymap)))
     (define-key map (kbd "C-c C-j") #'shiwake-date)
