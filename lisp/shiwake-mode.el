@@ -57,6 +57,7 @@
   (let ((map (make-sparse-keymap)))
     (define-key map (kbd "C-c C-j") #'shiwake-date)
     (define-key map (kbd "C-c C-h") #'shiwake-account)
+    (define-key map (kbd "C-c C-m") #'shiwake-read-account)
     map))
 
 (define-derived-mode shiwake-mode ledger-mode "Shiwake"
