@@ -49,15 +49,43 @@
   (interactive "MAccount: ")
   (insert (format shiwake-account-template account)))
 
+(defun shiwake-skip-account-backward ()
+  (save-excursion
+    (skip-chars-backward "^[:space:]\n()")))
+
+(defun shiwake-skip-account-forward ()
+  (save-excursion
+    (skip-chars-forward "^[:space:]\n()")))
+
+(defun shiwake-bounds-of-account-at-point ()
+  (let* ((cur (point))
+         (b (shiwake-skip-account-backward))
+         (e (shiwake-skip-account-forward)))
+    (cons (+ cur b) (+ cur e))))
+
+(defun shiwake-account-at-point ()
+  (let ((bounds (shiwake-bounds-of-account-at-point)))
+    (buffer-substring (car bounds) (cdr bounds))))
+
 (defun shiwake-read-account ()
   (interactive)
-  (insert (completing-read "科目名: " (ledger-accounts-list))))
+  (save-excursion
+    (let* ((bounds (shiwake-bounds-of-account-at-point))
+           (beg (car bounds))
+           (end (cdr bounds))
+           (res (completing-read "Account: "
+                                 (ledger-accounts-list)
+                                 nil
+                                 nil
+                                 (shiwake-account-at-point))))
+      (delete-region beg end)
+      (insert res))))
 
 (defvar shiwake-mode-map
   (let ((map (make-sparse-keymap)))
     (define-key map (kbd "C-c C-j") #'shiwake-date)
     (define-key map (kbd "C-c C-h") #'shiwake-account)
-    (define-key map (kbd "C-c C-m") #'shiwake-read-account)
+    (define-key map (kbd "C-c C-n") #'shiwake-read-account)
     map))
 
 (define-derived-mode shiwake-mode ledger-mode "Shiwake"
