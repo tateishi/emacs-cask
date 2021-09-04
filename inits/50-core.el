@@ -168,6 +168,7 @@
 
 (mapc (lambda (package) (use-package package))
       '(cmake-mode
+        csv-mode
         docker-compose-mode
         dockerfile-mode
         haskell-mode

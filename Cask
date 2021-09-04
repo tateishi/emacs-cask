@@ -44,3 +44,5 @@
 (depends-on "vertico")
 (depends-on "orderless")
 (depends-on "consult")
+
+(depends-on "csv-mode")
