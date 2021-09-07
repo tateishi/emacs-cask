@@ -162,6 +162,7 @@
 (use-package shiwake-mode
   :load-path "lisp"
   :commands (shiwake-mode)
+  :custom (ledger-accounts-file "~/wks/ledger/accounts/accounts.dat")
   :hook
   (ledger-mode . my-ledger-mode-hook)
   (ledger-mode . my-enable-trailing-whitespace))
