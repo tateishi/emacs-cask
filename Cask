@@ -48,3 +48,5 @@
 (depends-on "csv-mode")
 
 (depends-on "web-mode")
+
+(depends-on "company")

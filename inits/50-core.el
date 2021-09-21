@@ -51,7 +51,8 @@
   (size-indication-mode t)
   (menu-bar-mode -1)
   (tool-bar-mode -1)
-  (scroll-bar-mode -1))
+  (scroll-bar-mode -1)
+  (tab-bar-mode 1))
 
 ;;;
 ;;; edit
@@ -80,9 +81,21 @@
 	 (lisp-interaction-mode-hook . turn-on-eldoc-mode)
 	 (ielm-mode-hook . turn-on-eldoc-mode)))
 
-(use-package auto-complete
+;; (use-package auto-complete
+;;   :config
+;;   (global-auto-complete-mode t))
+
+
+(defun my-company-mode-hook ()
+  "Hook for company-mode"
+
+  (setq company-minimum-prefix-length 2))
+
+(use-package company
+  :hook
+  (company-mode-hook . my-company-mode-hook)
   :config
-  (global-auto-complete-mode t))
+  (global-company-mode))
 
 (use-package avy
   :bind
