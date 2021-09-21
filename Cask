@@ -46,3 +46,5 @@
 (depends-on "consult")
 
 (depends-on "csv-mode")
+
+(depends-on "web-mode")

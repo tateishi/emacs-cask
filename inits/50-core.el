@@ -127,10 +127,10 @@
 ;;; consult
 ;;;
 
-;; (use-package consult
-;;   :bind
-;;   (("C-x b" . consult-buffer))
-;; )
+(use-package consult
+  :bind
+  (("C-x b" . consult-buffer))
+)
 
 ;;;
 ;;; program modes
@@ -166,6 +166,19 @@
   :hook
   (ledger-mode . my-ledger-mode-hook)
   (ledger-mode . my-enable-trailing-whitespace))
+
+(defun my-web-mode-hook ()
+  "Hook for web-mode"
+  (setq web-mode-enable-auto-closing t)
+  (setq web-mode-enable-engine-detection t))
+
+(use-package web-mode
+  :commands (web-mode)
+  :mode (("\\.html\\'" . web-mode)
+         ("\\.tmpl\\'" . web-mode)
+         ("\\.jinja\\'" . web-mode))
+  :hook (web-mode . my-web-mode-hook))
+
 
 (mapc (lambda (package) (use-package package))
       '(cmake-mode
