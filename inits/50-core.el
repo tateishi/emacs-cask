@@ -180,6 +180,9 @@
   (ledger-mode . my-ledger-mode-hook)
   (ledger-mode . my-enable-trailing-whitespace))
 
+;;; web-mode
+;;; url: https://web-mode.org/
+
 (defun my-web-mode-hook ()
   "Hook for web-mode"
   (setq web-mode-enable-auto-closing t)
@@ -189,7 +192,8 @@
   :commands (web-mode)
   :mode (("\\.html\\'" . web-mode)
          ("\\.tmpl\\'" . web-mode)
-         ("\\.jinja\\'" . web-mode))
+         ("\\.jinja\\'" . web-mode)
+         ("\\.vue\\'" . web-mode))
   :hook (web-mode . my-web-mode-hook))
 
 
