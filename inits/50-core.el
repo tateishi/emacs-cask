@@ -243,8 +243,23 @@
 ;;; user interface
 ;;;
 
-(use-package zenburn-theme
-  :hook (after-init . (lambda () (load-theme 'zenburn t))))
+;;; modus themes
+;;; url: https://gitlab.com/protesilaos/modus-themes
+
+(use-package modus-themes
+  :ensure
+  :init
+  ;; Add all your customizations prior to loading the themes
+  (setq modus-themes-italic-constructs nil
+        modus-themes-bold-constructs nil
+        modus-themes-region '(bg-only no-extend))
+
+  ;; Load the theme files before enabling a theme
+  (modus-themes-load-themes)
+  :config
+  ;; Load the theme of your choice:
+  (modus-themes-load-operandi) ;; OR (modus-themes-load-vivendi)
+  :bind ("<f5>" . modus-themes-toggle))
 
 (use-package which-key
   :config (which-key-mode t))

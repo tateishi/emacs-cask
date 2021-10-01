@@ -27,7 +27,7 @@
 (depends-on "markdown-mode")
 (depends-on "yaml-mode")
 
-(depends-on "zenburn-theme")
+(depends-on "modus-themes")
 
 (depends-on "ace-window")
 
