@@ -26,6 +26,7 @@
 (depends-on "ledger-mode")
 (depends-on "markdown-mode")
 (depends-on "yaml-mode")
+(depends-on "typescript-mode")
 
 (depends-on "modus-themes")
 

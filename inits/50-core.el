@@ -186,7 +186,13 @@
 (defun my-web-mode-hook ()
   "Hook for web-mode"
   (setq web-mode-enable-auto-closing t)
-  (setq web-mode-enable-engine-detection t))
+  (setq web-mode-enable-engine-detection t)
+  (setq web-mode-markup-indent-offset 2)
+  (setq web-mode-attr-indent-offset 2)
+  (setq web-mode-css-indent-offset 2)
+  (setq web-mode-code-indent-offset 2)
+  (setq web-mode-script-padding 0)
+  (setq web-mode-style-padding 0))
 
 (use-package web-mode
   :commands (web-mode)
@@ -206,6 +212,7 @@
         json-mode
         meson-mode
         python-mode
+        typescript-mode
         yaml-mode))
 
 ;;;
