@@ -203,6 +203,15 @@
   :hook (web-mode . my-web-mode-hook))
 
 
+(defun my-typescript-mode-hook ()
+  "Hook for typescript-mode"
+  (setq typescript-indent-level 2))
+
+(use-package typescript-mode
+  :commands (typescript-mode)
+  :hook (typescript-mode . my-typescript-mode-hook))
+
+
 (mapc (lambda (package) (use-package package))
       '(cmake-mode
         csv-mode
@@ -212,7 +221,6 @@
         json-mode
         meson-mode
         python-mode
-        typescript-mode
         yaml-mode))
 
 ;;;
