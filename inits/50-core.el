@@ -280,6 +280,20 @@
   (modus-themes-load-vivendi) ;; OR (modus-themes-load-operandi)
   :bind ("<f5>" . modus-themes-toggle))
 
+;;;
+;;; calendar mode
+;;;
+
+(defun my-calendar-mode-hook ()
+  (setq calendar-week-start-day 1)
+  (setq calendar-latitude 35.1855875)
+  (setq calendar-longitude 136.8990919)
+  (setq calendar-location-name "名古屋市, 愛知県"))
+
+
+(use-package calendar
+  :hook (calendar-mode . my-calendar-mode-hook))
+
 (use-package which-key
   :config (which-key-mode t))
 
