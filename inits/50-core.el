@@ -286,8 +286,8 @@
 
 (defun my-calendar-mode-hook ()
   (setq calendar-week-start-day 1)
-  (setq calendar-latitude 35.1855875)
-  (setq calendar-longitude 136.8990919)
+  (setq calendar-latitude 35.18)
+  (setq calendar-longitude 136.90)
   (setq calendar-location-name "名古屋市, 愛知県"))
 
 
