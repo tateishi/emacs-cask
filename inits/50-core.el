@@ -221,6 +221,7 @@
         json-mode
         meson-mode
         python-mode
+        rust-mode
         yaml-mode))
 
 ;;;

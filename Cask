@@ -25,6 +25,7 @@
 (depends-on "json-mode")
 (depends-on "ledger-mode")
 (depends-on "markdown-mode")
+(depends-on "rust-mode")
 (depends-on "yaml-mode")
 (depends-on "typescript-mode")
 
