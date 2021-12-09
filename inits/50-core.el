@@ -151,7 +151,8 @@
 
 (defun my-cc-mode-hook ()
   (google-set-c-style)
-  (google-make-newline-indent))
+  (google-make-newline-indent)
+  (setq c-basic-offset 4))
 
 (use-package cc-mode
   :init
