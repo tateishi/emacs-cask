@@ -226,6 +226,20 @@
         yaml-mode))
 
 ;;;
+;;; python-black
+;;;
+
+(use-package python-black
+  :after python)
+
+;;;
+;;; py-isort
+;;;
+
+(use-package py-isort
+  :after python)
+
+;;;
 ;;; magit
 ;;;
 

@@ -17,6 +17,8 @@
 (depends-on "undo-tree")
 
 (depends-on "python-mode")
+(depends-on "python-black")
+(depends-on "py-isort")
 (depends-on "cmake-mode")
 (depends-on "meson-mode")
 (depends-on "docker-compose-mode")
