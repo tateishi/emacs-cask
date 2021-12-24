@@ -1,5 +1,8 @@
 (package "dotemacs" "0.0.1" ".emacs")
 
+(files "init.el" "inits/*.el" "lisp/*.el")
+
+
 (source gnu)
 (source melpa)
 (source melpa-stable)
