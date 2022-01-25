@@ -213,13 +213,20 @@
   :hook (typescript-mode . my-typescript-mode-hook))
 
 
+(defun my-json-mode-hook ()
+  "Hook for json-mode"
+  (setq js-indent-level 2))
+
+(use-package json-mode
+  :commands (json-mode)
+  :hook (json-mode . my-json-mode-hook))
+
 (mapc (lambda (package) (use-package package))
       '(cmake-mode
         csv-mode
         docker-compose-mode
         dockerfile-mode
         haskell-mode
-        json-mode
         meson-mode
         python-mode
         rust-mode
