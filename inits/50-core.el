@@ -215,7 +215,8 @@
 
 (defun my-json-mode-hook ()
   "Hook for json-mode"
-  (setq js-indent-level 2))
+  (setq js-indent-level 2
+        json-reformat:indent-width 2))
 
 (use-package json-mode
   :commands (json-mode)
