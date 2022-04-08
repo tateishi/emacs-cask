@@ -51,6 +51,7 @@
 (depends-on "vertico")
 (depends-on "orderless")
 (depends-on "consult")
+(depends-on "marginalia")
 
 (depends-on "csv-mode")
 

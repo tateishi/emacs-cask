@@ -146,6 +146,17 @@
 )
 
 ;;;
+;;; marginalia
+;;;
+
+(use-package marginalia
+  :bind (("M-A" . marginalia-cycle)
+         :map minibuffer-local-map
+         ("M-A" . marginalia-cycle))
+  :init
+  (marginalia-mode))
+
+;;;
 ;;; program modes
 ;;;
 
