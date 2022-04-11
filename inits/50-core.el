@@ -339,6 +339,7 @@
          :map treemacs-mode-map
          ("<f9>"  . treemacs-quit))
   :config
+  (setq treemacs-python-executable (executable-find "python"))
   (setq treemacs-width 25))
 
 ;;;
