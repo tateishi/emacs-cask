@@ -19,7 +19,7 @@
 	(if (fboundp 'normal-top-level-add-subdirs-to-load-path)
 	    (normal-top-level-add-subdirs-to-load-path))))))
 
-(add-to-load-path ".cask/28.1/elpa")
+(add-to-load-path (format ".cask/%s" emacs-version))
 
 (require 'cask "~/.cask/cask.el")
 (cask-initialize)

@@ -124,10 +124,9 @@
 ;;;
 
 (use-package vertico
-  :init
-  (vertico-mode)
   :config
-  (setq vertico-count 20))
+  (setq vertico-count 20)
+  (vertico-mode))
 
 ;;;
 ;;; orderless
@@ -153,7 +152,7 @@
   :bind (("M-A" . marginalia-cycle)
          :map minibuffer-local-map
          ("M-A" . marginalia-cycle))
-  :init
+  :config
   (marginalia-mode))
 
 ;;;
