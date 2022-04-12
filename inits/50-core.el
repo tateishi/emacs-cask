@@ -42,7 +42,7 @@
   :no-require t
   :config
   (set-language-environment "Japanese")
-  (prefer-coding-system 'utf-8))
+  (prefer-coding-system 'utf-8-unix))
 
 (use-package appearance
   :no-require t
@@ -70,6 +70,15 @@
   :init
   (show-paren-mode t)
   (setq-default require-final-newline t))
+
+;;;
+;;; repeat-mode
+;;;
+
+(use-package repeat-mode
+  :no-require t
+  :if (version< "28" emacs-version)
+  :config (repeat-mode 1))
 
 (use-package undo-tree
   :bind (("M-/" . undo-tree-redo)
