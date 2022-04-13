@@ -55,6 +55,16 @@
   (tab-bar-mode 1))
 
 ;;;
+;;; for microsoft windows
+;;;
+
+(use-package ms-windows
+  :no-require t
+  :if (eq system-type 'windows-nt)
+  :config
+  (setq default-process-coding-system '(utf-8-dos . cp932)))
+
+;;;
 ;;; edit
 ;;;
 
