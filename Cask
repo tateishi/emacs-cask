@@ -16,7 +16,6 @@
 
 (depends-on "magit")
 (depends-on "migemo")
-(depends-on "open-junk-file")
 (depends-on "undo-tree")
 
 (depends-on "python-mode")
