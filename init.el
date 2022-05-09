@@ -21,9 +21,6 @@
 
 (add-to-load-path (format ".cask/%s" emacs-version))
 
-(require 'cask "~/.cask/cask.el")
-(cask-initialize)
-
 (eval-when-compile
   (require 'use-package))
 
