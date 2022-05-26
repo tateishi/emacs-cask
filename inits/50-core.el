@@ -358,6 +358,7 @@
          :map treemacs-mode-map
          ("<f9>"  . treemacs-quit))
   :config
+  (load "treemacs-autoloads")
   (setq treemacs-python-executable (or (executable-find "python3") (executable-find "python")))
   (setq treemacs-width 25))
 
